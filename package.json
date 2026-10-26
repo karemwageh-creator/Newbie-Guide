@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "tsc -p tsconfig.build-test.json && echo '{\"type\":\"commonjs\"}' > dist-test/package.json && node scripts/verify-mvp.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
